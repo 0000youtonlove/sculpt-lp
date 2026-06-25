@@ -1,0 +1,1169 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <!-- ============================================================
+    メタ情報 / SEO
+    - noindex：ポートフォリオ用架空案件
+    - description：ページ内容を端的に要約
+    - OGP：SNSシェア時の表示設定
+  ============================================================ -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="【ポートフォリオ作品】30〜40代男性向けパーソナルジムの架空LP。HTML / CSS / JavaScript で制作。" />
+  <meta name="robots" content="noindex, nofollow" />
+  <meta property="og:title" content="SCULPT｜パーソナルジムLP（ポートフォリオ作品）" />
+  <meta property="og:description" content="【ポートフォリオ作品】30〜40代男性向けパーソナルジムの架空LP。" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="ja_JP" />
+  <!-- GitHub Pages公開後に自分のURLに差し替えること -->
+  <meta property="og:url" content="https://yourusername.github.io/sculpt-lp/" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=1200&auto=format&fit=crop&q=80" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="SCULPT｜パーソナルジムLP（ポートフォリオ作品）" />
+  <meta name="twitter:description" content="【ポートフォリオ作品】30〜40代男性向けパーソナルジムの架空LP。HTML / CSS / JavaScript で制作。" />
+  <meta name="twitter:image" content="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=1200&auto=format&fit=crop&q=80" />
+
+  <!-- canonical：GitHub Pages公開後に自分のURLに差し替えること -->
+  <link rel="canonical" href="https://yourusername.github.io/sculpt-lp/" />
+
+  <!-- favicon：SVGインラインで外部ファイル不要 -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='12' fill='%230a0a0a'/><text y='72' x='50' text-anchor='middle' font-size='60' font-family='serif' fill='%23c9a84c'>S</text></svg>" />
+
+  <title>SCULPT｜30・40代男性のためのパーソナルジム（ポートフォリオ作品）</title>
+
+  <!-- ============================================================
+    構造化データ（JSON-LD）
+    - LocalBusiness：Googleの検索結果リッチ表示に対応
+    - FAQPage：FAQセクションのリッチスニペット対応
+  ============================================================ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "SCULPT パーソナルジム",
+    "description": "30・40代男性ビジネスマンのための完全個室パーソナルジム。3ヶ月で理想の体型へ。",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "JP"
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+      "opens": "07:00",
+      "closes": "23:00"
+    },
+    "priceRange": "¥¥¥"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "運動経験がまったくないのですが大丈夫ですか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "もちろん大丈夫です。当ジムの会員の7割以上が運動未経験またはブランクのある方です。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "仕事が忙しく、週に何回通えるか分かりません。",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "週2回から対応しています。カウンセリング時にライフスタイルを詳しく伺い、無理のないペースを一緒に設計します。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "接待や会食が多いのですが、食事制限はきつくなりますか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "極端な制限は行いません。会食・外食でも太らない食べ方を指導します。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "カウンセリング後、必ず入会しないといけませんか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "入会は完全に任意です。強引な勧誘は一切行いません。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "過去に他のジムで続かなかった経験があります。",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "続かなかったのは環境と仕組みの問題です。SCULPTでは専属トレーナーとの予約制・LINEサポート・成果保証の3つで続く仕組みを作ります。"
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- ============================================================
+    フォント読み込み
+    - preconnect で接続を事前確立（パフォーマンス最適化）
+    - display=swap で FOIT（フォント読み込み中の非表示）を防止
+  ============================================================ -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Noto+Sans+JP:wght@300;400;500;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+  <!-- スキップリンク：キーボードユーザーがメインコンテンツへ直接ジャンプ -->
+  <a href="#main-content" class="skip-link">メインコンテンツへスキップ</a>
+
+  <!-- ============================================================
+    ヘッダー
+    LP専用設計：ナビなし（離脱を防ぐ）・ロゴ + 残枠 + CTA のみ
+  ============================================================ -->
+  <header class="site-header" role="banner">
+    <div class="container header__inner">
+
+      <a href="/" class="header__logo" aria-label="SCULPT パーソナルジム トップページへ">
+        <span class="logo__en" aria-hidden="true">SCULPT</span>
+        <span class="logo__ja">パーソナルジム</span>
+      </a>
+
+      <!-- 残枠バッジ：緊急性の訴求 -->
+      <p class="header__urgency" aria-live="polite" aria-atomic="true">
+        <span class="urgency__dot" aria-hidden="true"></span>
+        今月の無料枠 残り <strong>4</strong> 名
+      </p>
+
+      <a href="#contact" class="btn btn--sm btn--primary header__cta">
+        無料で話を聞く →
+      </a>
+
+      <!-- ハンバーガーボタン（SP用） -->
+      <button
+        class="hamburger"
+        type="button"
+        aria-label="メニューを開く"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+      >
+        <span class="hamburger__line"></span>
+        <span class="hamburger__line"></span>
+        <span class="hamburger__line"></span>
+      </button>
+    </div>
+
+    <!-- モバイルメニュー -->
+    <nav
+      id="mobile-menu"
+      class="mobile-menu"
+      aria-label="モバイルナビゲーション"
+      aria-hidden="true"
+    >
+      <ul class="mobile-menu__list" role="list">
+        <li><a href="#features" class="mobile-menu__link">特徴</a></li>
+        <li><a href="#results"  class="mobile-menu__link">実績</a></li>
+        <li><a href="#price"    class="mobile-menu__link">料金</a></li>
+        <li><a href="#faq"      class="mobile-menu__link">FAQ</a></li>
+        <li>
+          <a href="#contact" class="mobile-menu__link mobile-menu__link--cta">
+            今すぐ無料で話を聞く →
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main-content">
+
+    <!-- ============================================================
+      FV（ファーストビュー）
+      ターゲット：スーツ男性の画像 / 感情訴求コピー / 実績数値
+    ============================================================ -->
+    <section class="hero" aria-labelledby="hero-heading">
+
+      <!-- 背景画像：装飾的なのでalt="" / aria-hidden -->
+      <div class="hero__bg" aria-hidden="true">
+        <img
+          src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=1600&auto=format&fit=crop&q=80"
+          alt=""
+          class="hero__bg-img"
+          width="1600"
+          height="900"
+          loading="eager"
+          fetchpriority="high"
+          decoding="async"
+        />
+        <div class="hero__bg-overlay"></div>
+      </div>
+
+      <div class="container hero__inner">
+
+        <!-- 残枠バッジ（FV内） -->
+        <p class="hero__urgency-badge" role="status" aria-live="polite">
+          <span class="urgency__dot" aria-hidden="true"></span>
+          今月の無料カウンセリング枠 残り <strong>4名</strong>
+        </p>
+
+        <p class="hero__eyebrow">30・40代男性ビジネスマンのためのパーソナルジム</p>
+
+        <h1 id="hero-heading" class="hero__heading">
+          3ヶ月で、<br />
+          <em>自信を取り戻す体へ。</em>
+        </h1>
+
+        <p class="hero__sub">
+          鏡を見るたびに溜息をついていませんか？<br class="br--pc" />
+          部下に「老けた」と思われていないか、不安じゃないですか？
+        </p>
+
+        <!-- 実績数値：カウントアップ対象 -->
+        <ul class="hero__stats" role="list" aria-label="実績数値">
+          <li class="hero__stat">
+            <span class="stat__num">
+              累計<strong data-count="1200" data-suffix="" data-format="comma">1,200</strong>名
+            </span>
+            <span class="stat__label">指導実績</span>
+          </li>
+          <li class="hero__stat">
+            <span class="stat__num">
+              平均<strong data-count="8.4" data-prefix="−" data-decimals="1">−8.4</strong>kg
+            </span>
+            <span class="stat__label">3ヶ月実績</span>
+          </li>
+          <li class="hero__stat">
+            <span class="stat__num">
+              <strong data-count="98" data-suffix="%">98</strong>
+            </span>
+            <span class="stat__label">継続率</span>
+          </li>
+        </ul>
+
+        <!-- メインCTA -->
+        <div class="hero__cta-group">
+          <a href="#contact" class="btn btn--primary btn--lg btn--pulse">
+            まず話だけ聞いてみる（無料）→
+          </a>
+          <ul class="hero__trust-list" role="list" aria-label="安心ポイント">
+            <li>✓ 勧誘・営業は一切なし</li>
+            <li>✓ 当日、体を動かしません</li>
+            <li>✓ 所要60分・完全無料</li>
+          </ul>
+        </div>
+
+        <!-- スクロールインジケーター -->
+        <div class="hero__scroll" aria-hidden="true">
+          <span class="hero__scroll-text">SCROLL</span>
+          <div class="hero__scroll-line"></div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================================
+      悩みセクション
+      左：画像 / 右：共感コピー + CTA
+    ============================================================ -->
+    <section class="pain" aria-labelledby="pain-heading">
+      <div class="container pain__inner">
+
+        <div class="pain__image-wrap js-reveal">
+          <img
+            src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&auto=format&fit=crop&q=80"
+            alt="デスクで疲れた表情のビジネスマン"
+            class="pain__image"
+            width="600"
+            height="700"
+            loading="lazy"
+            decoding="async"
+          />
+          <div class="pain__image-frame" aria-hidden="true"></div>
+        </div>
+
+        <div class="pain__content">
+          <p class="section__eyebrow">あなたへの質問</p>
+          <h2 id="pain-heading" class="section__heading">
+            こんな気持ち、<br />ありませんか？
+          </h2>
+
+          <ul class="pain__list js-reveal" role="list">
+            <li class="pain__item">
+              <span class="pain__icon" aria-hidden="true">—</span>
+              <p>健康診断でまた引っかかり、妻に心配をかけている</p>
+            </li>
+            <li class="pain__item">
+              <span class="pain__icon" aria-hidden="true">—</span>
+              <p>好きだったスーツが入らず、新しいのを買うのも嫌だ</p>
+            </li>
+            <li class="pain__item">
+              <span class="pain__icon" aria-hidden="true">—</span>
+              <p>ジムに入会するたびに三日坊主。もう自分に期待できない</p>
+            </li>
+            <li class="pain__item">
+              <span class="pain__icon" aria-hidden="true">—</span>
+              <p>仕事で疲れ果てて、自分の体は後回し。この繰り返し</p>
+            </li>
+          </ul>
+
+          <div class="pain__resolve js-reveal" aria-label="SCULPTの約束">
+            <p class="pain__resolve-text">
+              その「どうせ自分には無理」という諦め、<br />
+              SCULPTが根拠ごと覆します。
+            </p>
+            <a href="#contact" class="btn btn--outline btn--md">まず話だけ聞いてみる →</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================================
+      理想の未来セクション
+    ============================================================ -->
+    <section class="ideal" aria-labelledby="ideal-heading">
+      <div class="container">
+        <p class="section__eyebrow">3ヶ月後のあなたへ</p>
+        <h2 id="ideal-heading" class="section__heading">
+          体が変わると、<br />人生が変わる。
+        </h2>
+
+        <div class="ideal__grid">
+
+          <article class="ideal__card js-reveal">
+            <div class="ideal__card-img-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=600&auto=format&fit=crop&q=80"
+                alt="ダンベルを持ってトレーニングする男性"
+                class="ideal__card-img"
+                width="600"
+                height="380"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <div class="ideal__card-body-wrap">
+              <div class="ideal__card-num" aria-hidden="true">01</div>
+              <h3 class="ideal__card-title">−10kgの体型</h3>
+              <p class="ideal__card-body">
+                数字が変わる。鏡が変わる。毎朝の気分が変わる。体重計に乗るのが楽しみになる日が来ます。
+              </p>
+            </div>
+          </article>
+
+          <article class="ideal__card js-reveal js-reveal--d1">
+            <div class="ideal__card-img-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=600&auto=format&fit=crop&q=80"
+                alt="スーツを着てビジネスに臨む自信のある男性"
+                class="ideal__card-img"
+                width="600"
+                height="380"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <div class="ideal__card-body-wrap">
+              <div class="ideal__card-num" aria-hidden="true">02</div>
+              <h3 class="ideal__card-title">スーツが似合う体</h3>
+              <p class="ideal__card-body">
+                「痩せましたか？」と言われる日が来ます。クライアントの前に立つ時の自信が、仕事の成果を変えます。
+              </p>
+            </div>
+          </article>
+
+          <article class="ideal__card js-reveal js-reveal--d2">
+            <div class="ideal__card-img-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=600&auto=format&fit=crop&q=80"
+                alt="自信に満ちた表情でトレーニングする男性"
+                class="ideal__card-img"
+                width="600"
+                height="380"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <div class="ideal__card-body-wrap">
+              <div class="ideal__card-num" aria-hidden="true">03</div>
+              <h3 class="ideal__card-title">仕事も家族も、全部が変わる</h3>
+              <p class="ideal__card-body">
+                体力が戻ると集中力が上がる。帰宅後に子どもと遊べる体力が生まれる。自信は全ての場面に伝播します。
+              </p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+      特徴セクション
+    ============================================================ -->
+    <section class="features" id="features" aria-labelledby="features-heading">
+      <div class="container">
+        <p class="section__eyebrow">SCULPTが選ばれる理由</p>
+        <h2 id="features-heading" class="section__heading">4つの特徴</h2>
+
+        <div class="features__grid">
+
+          <article class="feature__item js-reveal">
+            <div class="feature__img-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1576678927484-cc907957088c?w=600&auto=format&fit=crop&q=80"
+                alt="清潔感のある完全個室トレーニングルーム"
+                class="feature__img"
+                width="600"
+                height="360"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <div class="feature__text">
+              <div class="feature__icon-wrap" aria-hidden="true">
+                <svg class="feature__icon" viewBox="0 0 40 40" fill="none" aria-hidden="true" focusable="false">
+                  <circle cx="20" cy="20" r="18" stroke="currentColor" stroke-width="1.5"/>
+                  <path d="M14 20h12M20 14v12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <h3 class="feature__title">完全個室・マンツーマン</h3>
+              <p class="feature__body">
+                他の目を気にせず集中できる完全個室。「恥ずかしい」という理由でジムを続けられなかった方が、9割続けています。
+              </p>
+            </div>
+          </article>
+
+          <article class="feature__item js-reveal js-reveal--d1">
+            <div class="feature__img-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=600&auto=format&fit=crop&q=80"
+                alt="栄養バランスの取れた食事プレート"
+                class="feature__img"
+                width="600"
+                height="360"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <div class="feature__text">
+              <div class="feature__icon-wrap" aria-hidden="true">
+                <svg class="feature__icon" viewBox="0 0 40 40" fill="none" aria-hidden="true" focusable="false">
+                  <rect x="8" y="10" width="24" height="20" rx="2" stroke="currentColor" stroke-width="1.5"/>
+                  <path d="M14 20h12M20 15v10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <h3 class="feature__title">食事指導もセットで</h3>
+              <p class="feature__body">
+                会食・接待が多い方でも大丈夫。「何を食べるか」より「どう食べるか」を変えるだけで体は変わります。
+              </p>
+            </div>
+          </article>
+
+          <article class="feature__item js-reveal js-reveal--d2">
+            <div class="feature__img-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1483721310020-03333e577078?w=600&auto=format&fit=crop&q=80"
+                alt="夜景の見えるオフィスビル街"
+                class="feature__img"
+                width="600"
+                height="360"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <div class="feature__text">
+              <div class="feature__icon-wrap" aria-hidden="true">
+                <svg class="feature__icon" viewBox="0 0 40 40" fill="none" aria-hidden="true" focusable="false">
+                  <circle cx="20" cy="20" r="18" stroke="currentColor" stroke-width="1.5"/>
+                  <path d="M13 20l5 5 9-10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <h3 class="feature__title">忙しくても通える設計</h3>
+              <p class="feature__body">
+                7:00〜23:00営業・週2回60分から。「仕事が忙しい」という言い訳を、設計で潰しました。
+              </p>
+            </div>
+          </article>
+
+          <article class="feature__item js-reveal js-reveal--d3">
+            <div class="feature__img-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&auto=format&fit=crop&q=80"
+                alt="プロのパーソナルトレーナーが指導している様子"
+                class="feature__img"
+                width="600"
+                height="360"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <div class="feature__text">
+              <div class="feature__icon-wrap" aria-hidden="true">
+                <svg class="feature__icon" viewBox="0 0 40 40" fill="none" aria-hidden="true" focusable="false">
+                  <path d="M20 8l2.9 6.6 7.1.6-5.2 4.7 1.7 7L20 23.5l-6.5 3.4 1.7-7L10 15.2l7.1-.6z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <h3 class="feature__title">採用率5%以下のトレーナー</h3>
+              <p class="feature__body">
+                NSCA認定・採用率5%以下の審査を通過した精鋭のみ在籍。「三日坊主の自分」を変えるのは、環境と人です。
+              </p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+      お客様の声セクション
+      - ビフォーアフター数値バー
+      - 星評価（スクリーンリーダー対応済み）
+    ============================================================ -->
+    <section class="results" id="results" aria-labelledby="results-heading">
+      <div class="container">
+        <p class="section__eyebrow">お客様の声</p>
+        <h2 id="results-heading" class="section__heading">
+          実際に変わった方たちの声
+        </h2>
+
+        <div class="results__grid">
+
+          <article class="result__card js-reveal">
+            <!-- 星評価：aria-labelで「5つ星評価」と読み上げ、★は aria-hidden -->
+            <p class="result__stars" aria-label="5つ星中5つ星の評価">
+              <span aria-hidden="true">★★★★★</span>
+            </p>
+            <!-- ビフォーアフターバー -->
+            <div class="result__bar-wrap" role="img" aria-label="体重変化：83kgから72kgへ">
+              <div class="result__bar-row">
+                <span class="result__bar-label" aria-hidden="true">Before</span>
+                <div class="result__bar result__bar--before" style="--bar-width:100%" aria-hidden="true"></div>
+                <span class="result__bar-num" aria-hidden="true">83kg</span>
+              </div>
+              <div class="result__bar-row">
+                <span class="result__bar-label" aria-hidden="true">After</span>
+                <div class="result__bar result__bar--after" style="--bar-width:86%" aria-hidden="true"></div>
+                <span class="result__bar-num result__bar-num--gold" aria-hidden="true">72kg</span>
+              </div>
+            </div>
+            <header class="result__card-header">
+              <div class="result__avatar" aria-hidden="true">T</div>
+              <div>
+                <p class="result__name">T.Kさん <span class="result__age">38歳・会社員</span></p>
+                <p class="result__achievement">3ヶ月で <strong>−11kg</strong> 達成</p>
+              </div>
+            </header>
+            <blockquote class="result__quote">
+              <p>毎年の健康診断で要指導が続いていました。SCULPTでは食事の考え方から変えてもらい、気づいたら体重も血圧も改善。「また来年も…」の呪縛から解放されました。</p>
+            </blockquote>
+          </article>
+
+          <article class="result__card js-reveal js-reveal--d1">
+            <p class="result__stars" aria-label="5つ星中5つ星の評価">
+              <span aria-hidden="true">★★★★★</span>
+            </p>
+            <div class="result__bar-wrap" role="img" aria-label="体重変化：79kgから69.8kgへ">
+              <div class="result__bar-row">
+                <span class="result__bar-label" aria-hidden="true">Before</span>
+                <div class="result__bar result__bar--before" style="--bar-width:100%" aria-hidden="true"></div>
+                <span class="result__bar-num" aria-hidden="true">79kg</span>
+              </div>
+              <div class="result__bar-row">
+                <span class="result__bar-label" aria-hidden="true">After</span>
+                <div class="result__bar result__bar--after" style="--bar-width:88%" aria-hidden="true"></div>
+                <span class="result__bar-num result__bar-num--gold" aria-hidden="true">69.8kg</span>
+              </div>
+            </div>
+            <header class="result__card-header">
+              <div class="result__avatar" aria-hidden="true">M</div>
+              <div>
+                <p class="result__name">M.Sさん <span class="result__age">43歳・管理職</span></p>
+                <p class="result__achievement">3ヶ月で <strong>−9.2kg</strong> 達成</p>
+              </div>
+            </header>
+            <blockquote class="result__quote">
+              <p>出張が多くて続けられるか不安でしたが、LINEでの食事管理があったので乗り切れました。部下から「なんか雰囲気変わりましたね」と言われた時は本当に嬉しかった。</p>
+            </blockquote>
+          </article>
+
+          <article class="result__card js-reveal js-reveal--d2">
+            <p class="result__stars" aria-label="5つ星中5つ星の評価">
+              <span aria-hidden="true">★★★★★</span>
+            </p>
+            <div class="result__bar-wrap" role="img" aria-label="体重変化：76kgから67.3kgへ">
+              <div class="result__bar-row">
+                <span class="result__bar-label" aria-hidden="true">Before</span>
+                <div class="result__bar result__bar--before" style="--bar-width:100%" aria-hidden="true"></div>
+                <span class="result__bar-num" aria-hidden="true">76kg</span>
+              </div>
+              <div class="result__bar-row">
+                <span class="result__bar-label" aria-hidden="true">After</span>
+                <div class="result__bar result__bar--after" style="--bar-width:89%" aria-hidden="true"></div>
+                <span class="result__bar-num result__bar-num--gold" aria-hidden="true">67.3kg</span>
+              </div>
+            </div>
+            <header class="result__card-header">
+              <div class="result__avatar" aria-hidden="true">R</div>
+              <div>
+                <p class="result__name">R.Hさん <span class="result__age">36歳・エンジニア</span></p>
+                <p class="result__achievement">3ヶ月で <strong>−8.7kg</strong> 達成</p>
+              </div>
+            </header>
+            <blockquote class="result__quote">
+              <p>一人では絶対続かないタイプです。予約があるから行けた。3ヶ月で体が変わると、仕事のパフォーマンスも集中力も明らかに変わりました。妻にも褒められました。</p>
+            </blockquote>
+          </article>
+
+        </div>
+
+        <p class="results__disclaimer">
+          ※結果には個人差があります。効果を保証するものではありません。
+        </p>
+
+        <div class="results__cta js-reveal">
+          <p class="results__cta-text">あなたも3ヶ月後、変わっていられますか？</p>
+          <a href="#contact" class="btn btn--primary btn--lg btn--pulse">
+            まず話だけ聞いてみる（無料）→
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================================
+      申し込みの流れセクション
+    ============================================================ -->
+    <section class="flow" id="flow" aria-labelledby="flow-heading">
+      <div class="container">
+        <p class="section__eyebrow">始め方</p>
+        <h2 id="flow-heading" class="section__heading">
+          申し込みからカウンセリングまで<br />3ステップ
+        </h2>
+
+        <!-- role="list" で順序付きリストとして読み上げ -->
+        <ol class="flow__steps js-reveal" role="list" aria-label="申し込みステップ">
+
+          <li class="flow__step-item">
+            <div class="flow__step-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none" focusable="false">
+                <circle cx="24" cy="24" r="22" stroke="currentColor" stroke-width="1.5"/>
+                <path d="M16 24h16M24 16v16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <p class="flow__step-num" aria-hidden="true">STEP 1</p>
+            <h3 class="flow__step-title">フォームに記入</h3>
+            <p class="flow__step-body">名前・電話番号のみ。<br />所要2分</p>
+          </li>
+
+          <li class="flow__step-arrow" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" focusable="false">
+              <path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </li>
+
+          <li class="flow__step-item">
+            <div class="flow__step-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none" focusable="false">
+                <circle cx="24" cy="24" r="22" stroke="currentColor" stroke-width="1.5"/>
+                <rect x="14" y="16" width="20" height="16" rx="2" stroke="currentColor" stroke-width="1.5"/>
+                <path d="M14 22h20" stroke="currentColor" stroke-width="1.5"/>
+              </svg>
+            </div>
+            <p class="flow__step-num" aria-hidden="true">STEP 2</p>
+            <h3 class="flow__step-title">日程を決める</h3>
+            <p class="flow__step-body">24時間以内に<br />スタッフからご連絡</p>
+          </li>
+
+          <li class="flow__step-arrow" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" focusable="false">
+              <path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </li>
+
+          <li class="flow__step-item">
+            <div class="flow__step-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none" focusable="false">
+                <circle cx="24" cy="24" r="22" stroke="currentColor" stroke-width="1.5"/>
+                <circle cx="24" cy="20" r="5" stroke="currentColor" stroke-width="1.5"/>
+                <path d="M14 36c0-5.523 4.477-10 10-10s10 4.477 10 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <p class="flow__step-num" aria-hidden="true">STEP 3</p>
+            <h3 class="flow__step-title">無料カウンセリング</h3>
+            <p class="flow__step-body">60分・体を動かさない<br />強引な勧誘なし</p>
+          </li>
+
+          <li class="flow__step-arrow" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" focusable="false">
+              <path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </li>
+
+          <li class="flow__step-item flow__step-item--goal">
+            <div class="flow__step-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none" focusable="false">
+                <circle cx="24" cy="24" r="22" stroke="currentColor" stroke-width="1.5"/>
+                <path d="M16 24l6 6 10-12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <p class="flow__step-num" aria-hidden="true">GOAL</p>
+            <h3 class="flow__step-title">入会 or 見送り</h3>
+            <p class="flow__step-body">納得した方のみ<br />入会いただきます</p>
+          </li>
+
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============================================================
+      料金セクション
+    ============================================================ -->
+    <section class="price" id="price" aria-labelledby="price-heading">
+      <div class="container">
+        <p class="section__eyebrow">料金プラン</p>
+        <h2 id="price-heading" class="section__heading">シンプルな料金体系</h2>
+
+        <div class="price__grid">
+
+          <article class="price__card js-reveal">
+            <header class="price__card-header">
+              <p class="price__plan-name">Standard</p>
+              <p class="price__duration">3ヶ月プログラム</p>
+            </header>
+            <div class="price__body">
+              <p class="price__amount">
+                <span class="price__currency" aria-hidden="true">¥</span>
+                <span class="price__num">198,000</span>
+                <span class="price__tax">
+                  <span class="price__tax-unit">円</span>
+                  <span class="price__tax-note">税込</span>
+                </span>
+              </p>
+              <p class="price__per">週2回 × 12週 = 24セッション</p>
+              <p class="price__unit-cost" aria-label="1セッションあたり8,250円">
+                <span class="price__unit-label">1セッション</span>
+                <span class="price__unit-num">¥8,250</span>
+              </p>
+              <p class="price__monthly">
+                月々 <strong>約16,500円</strong>〜（分割払い時）
+              </p>
+              <ul class="price__includes" role="list">
+                <li>専属トレーナーによるマンツーマン指導</li>
+                <li>食事指導（LINEサポート付き）</li>
+                <li>体組成測定（毎月）</li>
+                <li>完全個室・器具使い放題</li>
+              </ul>
+            </div>
+            <footer class="price__card-footer">
+              <a href="#contact" class="btn btn--primary btn--full">まず話だけ聞いてみる →</a>
+            </footer>
+          </article>
+
+          <article class="price__card price__card--featured js-reveal js-reveal--d2">
+            <div class="price__badge" aria-label="人気ナンバーワン">人気No.1</div>
+            <header class="price__card-header">
+              <p class="price__plan-name">Premium</p>
+              <p class="price__duration">3ヶ月プログラム</p>
+            </header>
+            <div class="price__body">
+              <p class="price__amount">
+                <span class="price__currency" aria-hidden="true">¥</span>
+                <span class="price__num">268,000</span>
+                <span class="price__tax">
+                  <span class="price__tax-unit">円</span>
+                  <span class="price__tax-note">税込</span>
+                </span>
+              </p>
+              <p class="price__per">週3回 × 12週 = 36セッション</p>
+              <p class="price__unit-cost" aria-label="1セッションあたり7,444円">
+                <span class="price__unit-label">1セッション</span>
+                <span class="price__unit-num">¥7,444</span>
+              </p>
+              <p class="price__monthly">
+                月々 <strong>約22,300円</strong>〜（分割払い時）
+              </p>
+              <ul class="price__includes" role="list">
+                <li>専属トレーナーによるマンツーマン指導</li>
+                <li>食事指導（LINEサポート付き）</li>
+                <li>体組成測定（毎月）</li>
+                <li>完全個室・器具使い放題</li>
+                <li><strong>栄養サプリメント1ヶ月分</strong></li>
+                <li><strong>卒業後フォロープログラム付き</strong></li>
+              </ul>
+            </div>
+            <footer class="price__card-footer">
+              <a href="#contact" class="btn btn--primary btn--full">まず話だけ聞いてみる →</a>
+            </footer>
+          </article>
+
+        </div>
+
+        <!-- 返金保証バッジ -->
+        <div class="price__guarantee js-reveal">
+          <div class="guarantee__icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48" fill="none" focusable="false">
+              <path d="M24 4l4.5 8.5L38 14l-7 7 1.5 10.5L24 27l-8.5 4.5L17 21l-7-7 9.5-1.5z"
+                stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+              <path d="M19 24l3.5 3.5 6.5-7"
+                stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="guarantee__content">
+            <p class="guarantee__title">成果が出なければ全額返金保証</p>
+            <p class="guarantee__body">
+              3ヶ月で目標体重に到達できなかった場合、全額を返金いたします。結果にコミットするからこそ、保証できます。
+            </p>
+          </div>
+        </div>
+
+        <p class="price__note">
+          ※入会金・事務手数料は一切かかりません。<br />
+          ※分割払い（最大24回）もご利用いただけます。
+        </p>
+
+      </div>
+    </section>
+
+    <!-- ============================================================
+      FAQセクション
+      WAI-ARIA アコーディオン実装
+    ============================================================ -->
+    <section class="faq" id="faq" aria-labelledby="faq-heading">
+      <div class="container">
+        <p class="section__eyebrow">よくある質問</p>
+        <h2 id="faq-heading" class="section__heading">不安を解消します</h2>
+
+        <dl class="faq__list">
+
+          <div class="faq__item js-reveal">
+            <dt class="faq__question">
+              <button
+                class="faq__btn"
+                type="button"
+                aria-expanded="false"
+                aria-controls="faq-answer-1"
+              >
+                <span>運動経験がまったくないのですが大丈夫ですか？</span>
+                <span class="faq__icon" aria-hidden="true"></span>
+              </button>
+            </dt>
+            <dd class="faq__answer" id="faq-answer-1" hidden>
+              <p>もちろん大丈夫です。当ジムの会員の7割以上が運動未経験またはブランクのある方です。「ジムが恥ずかしい」という方こそ、完全個室のSCULPTが合っています。</p>
+            </dd>
+          </div>
+
+          <div class="faq__item js-reveal">
+            <dt class="faq__question">
+              <button
+                class="faq__btn"
+                type="button"
+                aria-expanded="false"
+                aria-controls="faq-answer-2"
+              >
+                <span>仕事が忙しく、週に何回通えるか分かりません。</span>
+                <span class="faq__icon" aria-hidden="true"></span>
+              </button>
+            </dt>
+            <dd class="faq__answer" id="faq-answer-2" hidden>
+              <p>週2回から対応しています。出張・残業が多い方も多く通われています。カウンセリング時にライフスタイルを詳しく伺い、無理のないペースを一緒に設計します。</p>
+            </dd>
+          </div>
+
+          <div class="faq__item js-reveal">
+            <dt class="faq__question">
+              <button
+                class="faq__btn"
+                type="button"
+                aria-expanded="false"
+                aria-controls="faq-answer-3"
+              >
+                <span>接待や会食が多いのですが、食事制限はきつくなりますか？</span>
+                <span class="faq__icon" aria-hidden="true"></span>
+              </button>
+            </dt>
+            <dd class="faq__answer" id="faq-answer-3" hidden>
+              <p>極端な制限は行いません。会食・外食でも太らない食べ方を指導します。「何を我慢するか」ではなく「どう食べるか」を変えるだけで、体は確実に変わります。</p>
+            </dd>
+          </div>
+
+          <div class="faq__item js-reveal">
+            <dt class="faq__question">
+              <button
+                class="faq__btn"
+                type="button"
+                aria-expanded="false"
+                aria-controls="faq-answer-4"
+              >
+                <span>カウンセリング後、必ず入会しないといけませんか？</span>
+                <span class="faq__icon" aria-hidden="true"></span>
+              </button>
+            </dt>
+            <dd class="faq__answer" id="faq-answer-4" hidden>
+              <p>入会は完全に任意です。カウンセリングは「現状のお悩みと目標をお聞きする場」であり、強引な勧誘は一切行いません。「話だけ聞きたい」という方を最も歓迎しています。</p>
+            </dd>
+          </div>
+
+          <div class="faq__item js-reveal">
+            <dt class="faq__question">
+              <button
+                class="faq__btn"
+                type="button"
+                aria-expanded="false"
+                aria-controls="faq-answer-5"
+              >
+                <span>過去に他のジムで続かなかった経験があります。</span>
+                <span class="faq__icon" aria-hidden="true"></span>
+              </button>
+            </dt>
+            <dd class="faq__answer" id="faq-answer-5" hidden>
+              <p>「続かなかった」のはあなたの意志の問題ではなく、環境と仕組みの問題です。SCULPTでは専属トレーナーとの予約制・LINE日次サポート・成果保証の3つで「続く仕組み」を作ります。継続率98%がその証拠です。</p>
+            </dd>
+          </div>
+
+        </dl>
+
+        <div class="faq__cta js-reveal">
+          <a href="#contact" class="btn btn--primary btn--lg btn--pulse">
+            まず話だけ聞いてみる（無料）→
+          </a>
+          <p class="faq__cta-note">今月の残り枠：4名 / 強引な勧誘は一切しません</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================================
+      お問い合わせ・フォームセクション
+      - 3項目に絞る（名前・電話・メール）
+      - マイクロコピーで不安を先回り解消
+      - LINE代替手段でフォーム離脱を防ぐ
+    ============================================================ -->
+    <section class="contact" id="contact" aria-labelledby="contact-heading">
+      <div class="container">
+
+        <p class="section__eyebrow">無料カウンセリング</p>
+        <h2 id="contact-heading" class="section__heading contact__heading">
+          まず、話だけ<br />聞かせてください。
+        </h2>
+        <p class="contact__lead">
+          60分。体を動かしません。<br />
+          強引な勧誘は一切しません。<br />
+          話を聞いて「合わない」と思えば、それで終わりです。
+        </p>
+
+        <!-- 安心バッジ -->
+        <ul class="contact__trust" role="list" aria-label="安心ポイント">
+          <li class="contact__trust-item">
+            <span class="trust__icon" aria-hidden="true">✓</span>完全無料
+          </li>
+          <li class="contact__trust-item">
+            <span class="trust__icon" aria-hidden="true">✓</span>勧誘なし
+          </li>
+          <li class="contact__trust-item">
+            <span class="trust__icon" aria-hidden="true">✓</span>24h以内に返信
+          </li>
+          <li class="contact__trust-item">
+            <span class="trust__icon" aria-hidden="true">✓</span>個人情報は厳重管理
+          </li>
+        </ul>
+
+        <!-- フォーム -->
+        <!-- ポートフォリオ用デモフォーム：実案件では action に送信先URLを設定すること -->
+        <form
+          class="contact__form"
+          id="contact-form"
+          novalidate
+          aria-label="無料カウンセリング申し込みフォーム"
+        >
+          <div class="form__group">
+            <label for="name" class="form__label">
+              お名前
+              <span class="form__required" aria-label="必須">必須</span>
+            </label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              class="form__input"
+              placeholder="山田 太郎"
+              required
+              autocomplete="name"
+              aria-required="true"
+              aria-describedby="name-error"
+            />
+            <span
+              class="form__error"
+              id="name-error"
+              role="alert"
+              aria-live="polite"
+            ></span>
+          </div>
+
+          <div class="form__group">
+            <label for="tel" class="form__label">
+              電話番号
+              <span class="form__required" aria-label="必須">必須</span>
+            </label>
+            <input
+              type="tel"
+              id="tel"
+              name="tel"
+              class="form__input"
+              placeholder="090-0000-0000"
+              required
+              autocomplete="tel"
+              aria-required="true"
+              aria-describedby="tel-error tel-hint"
+            />
+            <!-- マイクロコピー：aria-describedby で入力と紐付け -->
+            <span class="form__micro" id="tel-hint">
+              営業電話は一切かけません。日程調整のみにご使用します。
+            </span>
+            <span
+              class="form__error"
+              id="tel-error"
+              role="alert"
+              aria-live="polite"
+            ></span>
+          </div>
+
+          <div class="form__group">
+            <label for="email" class="form__label">
+              メールアドレス
+              <span class="form__required" aria-label="必須">必須</span>
+            </label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              class="form__input"
+              placeholder="example@email.com"
+              required
+              autocomplete="email"
+              aria-required="true"
+              aria-describedby="email-error email-hint"
+            />
+            <span class="form__micro" id="email-hint">
+              スパムメールは送りません。確認メールのみお送りします。
+            </span>
+            <span
+              class="form__error"
+              id="email-error"
+              role="alert"
+              aria-live="polite"
+            ></span>
+          </div>
+
+          <button
+            type="submit"
+            class="btn btn--primary btn--lg btn--full btn--pulse form__submit"
+          >
+            今すぐ無料カウンセリングを予約する →
+          </button>
+
+          <p class="form__after-note">
+            送信後、担当スタッフより <strong>24時間以内</strong> にご連絡します。
+          </p>
+
+          <p class="form__privacy">
+            送信することで
+            <a href="#" class="form__privacy-link">プライバシーポリシー</a>
+            に同意したものとみなします。
+          </p>
+
+          <!-- LINE代替手段 -->
+          <div class="form__line-alt">
+            <p class="form__line-alt-label">フォームが面倒な方はLINEでも相談できます</p>
+            <a href="#" class="btn btn--line" aria-label="LINEで無料相談する（外部リンク）">
+              <svg
+                class="line-icon"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                aria-hidden="true"
+                focusable="false"
+              >
+                <path d="M12 2C6.48 2 2 6.03 2 11c0 2.7 1.3 5.1 3.35 6.8L4.5 22l4.42-1.55A10.6 10.6 0 0012 21c5.52 0 10-4.03 10-9S17.52 2 12 2z"/>
+              </svg>
+              LINEで無料相談する
+            </a>
+          </div>
+
+        </form>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================================
+    フッター
+  ============================================================ -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <p class="footer__logo">SCULPT</p>
+        <p class="footer__tagline">30・40代男性のためのパーソナルジム</p>
+      </div>
+      <nav class="footer__nav" aria-label="フッターナビゲーション">
+        <ul class="footer__nav-list" role="list">
+          <li><a href="#features" class="footer__nav-link">特徴</a></li>
+          <li><a href="#results"  class="footer__nav-link">実績</a></li>
+          <li><a href="#price"    class="footer__nav-link">料金</a></li>
+          <li><a href="#faq"      class="footer__nav-link">FAQ</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="footer__bottom">
+      <p class="footer__portfolio-note">
+        ※本サイトはポートフォリオ用に制作した架空案件です。
+      </p>
+      <p class="footer__copy">
+        <small>&copy; 2024 SCULPT Personal Gym. All rights reserved.</small>
+      </p>
+    </div>
+  </footer>
+
+  <!-- スマホ固定CTAバー（モバイル専用 / JSで制御） -->
+  <div
+    class="fixed-cta"
+    id="fixed-cta"
+    aria-label="無料カウンセリング申し込み"
+    hidden
+  >
+    <div class="fixed-cta__inner">
+      <div class="fixed-cta__text">
+        <span class="fixed-cta__urgency">残り4名</span>
+        <span class="fixed-cta__sub">今月の無料枠</span>
+      </div>
+      <a href="#contact" class="btn btn--primary fixed-cta__btn">
+        今すぐ無料で話を聞く →
+      </a>
+    </div>
+  </div>
+
+  <!-- ページトップへ戻るボタン -->
+  <button
+    id="back-to-top"
+    class="back-to-top"
+    type="button"
+    aria-label="ページトップへ戻る"
+    hidden
+  >
+    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+      <path d="M18 15l-6-6-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </button>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
